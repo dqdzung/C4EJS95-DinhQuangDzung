@@ -131,4 +131,69 @@
   }
 }
 
+//9.
+//a.	6 L’s and H’s, half L’s, half H’s (L means low, H means high)
+{
+  let n = 6;
+  let i = 0;
+  let x = n / 2;
+  for (i; i < x; i++) {
+    console.log("L");
+  }
+  for (x; x < n; x++) {
+    console.log("H");
+  }
+}
+
+//b. n L’s and H’s in total, n entered by user
+{
+  let n = prompt("Enter total number of L and H:");
+  let i = 1;
+  let x = n / 2; //3.5
+  for (i; i < x; i++) {
+    console.log("L");
+  }
+  for (x; x < n; x++) {
+    console.log("H");
+  }
+}
+
+//c.	8 1’s and 0’s in total, consecutively
+{
+  let number = 8;
+  let counter = 0;
+  while (counter < number) {
+    console.log(0);
+    console.log(1);
+    counter += 2;
+  }
+}
+
+//d.  1’s and 0’s in total, consecutively, n entered by user
+{
+  let number = prompt("enter a number:");
+  let counter = 0;
+  while (counter < number) {
+    console.log(0);
+    console.log(1);
+    counter += 2;
+  }
+}
+
 // 10.	Write a script to calculate the BMI (Body Mass Index) of a person, the formula is as follows
+{
+  let mass = prompt("Enter your mass in kg:");
+  let height = prompt("Enter your height in cm:") / 100;
+  let bmi = mass / height ** 2;
+  if (bmi < 16) {
+    alert("Your BMI: " + bmi + ". " + "You're too skinny");
+  } else if (bmi >= 16 && bmi < 18.5) {
+    alert("Your BMI: " + bmi + ". " + "You're underweight");
+  } else if (bmi >= 18.5 && bmi < 25) {
+    alert("Your BMI: " + bmi + ". " + "Grats, you're normal");
+  } else if (bmi >= 25 && bmi < 30) {
+    alert("Your BMI: " + bmi + ". " + "You're fat");
+  } else if (bmi >= 30) {
+    alert("Your BMI: " + bmi + ". " + "You're obese");
+  }
+}
