@@ -197,3 +197,53 @@
     alert("Your BMI: " + bmi + ". " + "You're obese");
   }
 }
+
+//11. Turtle
+//a.  Square
+{
+  let i = 0;
+  for (i; i < 4; i++) {
+    fd(100);
+    rt(90);
+  }
+}
+
+//b.  Triangle
+{
+  let i = 0;
+  for (i; i < 3; i++) {
+    fd(100);
+    rt(120);
+  }
+}
+
+//c.  Pentagon
+{
+  let i = 0;
+  for (i; i < 5; i++) {
+    fd(100);
+    rt(72);
+  }
+}
+
+//d. Hexagon
+{
+  let i = 0;
+  for (i; i < 6; i++) {
+    fd(100);
+    rt(60);
+  }
+}
+
+//12. Draw a polygon of n sides, n is user defined.
+{
+  let n = prompt("Enter number of sides:");
+  let i = 0;
+  let angle = [(n - 2) * 180] / n;
+  for (i; i < n; i++) {
+    fd(100);
+    rt(180 - angle);
+  }
+}
+
+//13. Draw n polygon(s), n is user defined
