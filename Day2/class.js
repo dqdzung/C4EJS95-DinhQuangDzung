@@ -17,7 +17,7 @@ if (oddOrEven != 0) {
 
 let number = prompt("enter a number:");
 let oddOrEven = number % 2;
-if (oddOrEven = 0) {
+if (oddOrEven == 0) {
   alert("Even");
 } else {
   alert("Odd");
