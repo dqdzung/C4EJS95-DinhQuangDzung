@@ -14,4 +14,3 @@
 //Use let when you want to change the value of the variables. Use const when you know for sure the variables are unchanged.
 
 //2.	Boolean
-//test
