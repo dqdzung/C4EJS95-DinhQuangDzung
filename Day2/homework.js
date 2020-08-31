@@ -28,48 +28,52 @@
 
 // b.	n numbers, starting from 0, n entered by user
 {
-  let n = prompt("Enter a number:") - 0; // convert n into number
+  let endingNumber = prompt("Enter a number:") - 0; // convert n into number
   let i;
-  for (i = 0; i < n; i++) {
+  for (i = 0; i < endingNumber; i++) {
     console.log(i);
   }
 }
 
 // c.	A sequence of numbers, starting from 3, ending before n, n entered by user
 {
-  let n = prompt("Enter a number:") - 0;
+  let endingNumber = prompt("Enter a number:") - 0;
   let i = 3;
-  for (i; i < n; i++) {
+  for (i; i < endingNumber; i++) {
     console.log(i);
   }
 }
 
 // d.	A sequence of numbers, starting from c, ending before n, c and n entered by user
 {
-  let c = prompt("Enter a starting number:") - 0;
-  let n = prompt("Enter an ending number:") - 0;
-  for (c; c < n; c++) {
-    console.log(c);
+  let startingNumber = prompt("Enter a starting number:") - 0;
+  let endingNumber = prompt("Enter an ending number:") - 0;
+  for (startingNumber; startingNumber < endingNumber; startingNumber++) {
+    console.log(startingNumber);
   }
 }
 
 // e.	A sequence of numbers, starting from c, ending before n, stepping by 3, c and n entered by user
 {
-  let c = prompt("Enter starting number:") - 0;
-  let n = prompt("Enter ending number:") - 0;
-  let s = 3;
-  for (c; c < n; c += s) {
-    console.log(c);
+  let startingNumber = prompt("Enter starting number:") - 0;
+  let endingNumber = prompt("Enter ending number:") - 0;
+  let step = 3;
+  for (startingNumber; startingNumber < endingNumber; startingNumber += step) {
+    console.log(startingNumber);
   }
 }
 
 // f.	A sequence of numbers, starting from c, ending before n, stepping by s. c, n and  s entered by user
 {
-  let c = prompt("Enter starting number:") - 0;
-  let n = prompt("Enter ending number:") - 0;
-  let s = prompt("Enter increment:") - 0;
-  for (c; c < n; c += s) {
-    console.log(c);
+  let startingNumber = prompt("Enter starting number:") - 0;
+  let endingNumber = prompt("Enter ending number:") - 0;
+  let increment = prompt("Enter increment:") - 0;
+  for (
+    startingNumber;
+    startingNumber < endingNumber;
+    startingNumber += increment
+  ) {
+    console.log(startingNumber);
   }
 }
 
