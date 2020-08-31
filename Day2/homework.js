@@ -241,10 +241,10 @@
 
 //12. Draw a polygon of n sides, n is user defined.
 {
-  let n = prompt("Enter number of sides:");
+  let polygonSides = prompt("Enter number of sides:");
   let i = 0;
-  let angle = [(n - 2) * 180] / n;
-  for (i; i < n; i++) {
+  let angle = [(polygonSides - 2) * 180] / polygonSides;
+  for (i; i < polygonSides; i++) {
     fd(100);
     rt(180 - angle);
   }
