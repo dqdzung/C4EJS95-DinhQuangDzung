@@ -40,22 +40,18 @@ let books = [
 {
   let bill = [124, 48, 268];
   let tipPercent;
-  let tips;
-  let total;
   let tipEachBill = [];
   let billAndTips = [];
   for (let i = 0; i < bill.length; i++) {
-    if (bill[i] < 50) {
+    if (bill[i] <= 50) {
       tipPercent = 0.2;
-    } else if (bill[i] > 50 && bill[i] < 200) {
+    } else if (bill[i] > 50 && bill[i] <= 200) {
       tipPercent = 0.15;
     } else {
       tipPercent = 0.1;
     }
-    tips = bill[i] * tipPercent;
-    total = bill[i] + tips;
-    tipEachBill.push(tips);
-    billAndTips.push(total);
+    tipEachBill[i] = bill[i] * tipPercent;
+    billAndTips[i] = bill[i] + tipEachBill[i];
   }
   console.log(`Amount of tips for each bill: ${tipEachBill}`);
   console.log(`Total amount for each bill: ${billAndTips}`);
