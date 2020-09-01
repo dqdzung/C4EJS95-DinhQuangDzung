@@ -175,7 +175,7 @@
 
 //d.  1’s and 0’s in total, consecutively, n entered by user
 {
-  console number = prompt("enter a number:");
+  const number = prompt("enter a number:");
   let counter = 0;
   while (counter < number) {
     console.log(0);
