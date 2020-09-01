@@ -24,11 +24,11 @@ if (oddOrEven == 0) {
 }
 
 //Exercise 3
-let userName = prompt("enter a name");
-if (userName = "") {
+const userName = prompt("enter a name:");
+if (userName != "") {
+  let userPassword = prompt("enter a password:");
+  for (userPassword == ""; userPassword.length < 6; userPassword.length > 20) {
+    userPassword = prompt("enter password again, 6-20 characters:");
+  }
 }
-let userPassword = prompt("enter a password");
-for (userPassword = ""; userPassword.length < 6; userPassword.length > 20) {
-  userPassword = prompt("enter password again");
-}
-alert("success");
+alert("success!");
