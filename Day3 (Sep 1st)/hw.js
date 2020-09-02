@@ -56,4 +56,30 @@ while (true) {
   }
 }
 
-// 5. 
+// 5. Write a script to ask users enter a sequence of numbers, separated by commas, calculate the sum of the numbers and show it
+{
+  const userSequence = prompt(
+    `Enter a sequence of number, separate by comma (,):`
+  );
+  let toArray = userSequence.split(",");
+  let sum = 0;
+  for (let i = 0; i < toArray.length; i++) {
+    sum += Number(toArray[i]);
+  }
+  alert(sum);
+}
+
+// 6. Write a script asking users to enter a sequence of numbers, separated by commas, find the smallest number and log it out
+{
+  const userSequence = prompt(
+    `Enter a sequence of number, separate by comma (,):`
+  );
+  let toArray = userSequence.split(",");
+  let min = toArray[0];
+  for (let i = 0; i < toArray.length; i++) {
+      if (toArray[i] < min) {
+          min = toArray[i];
+      }
+  }
+  alert(`The smallest number in your sequence is: ${min}`);
+}
