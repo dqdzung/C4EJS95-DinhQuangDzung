@@ -83,3 +83,5 @@ while (true) {
   }
   alert(`The smallest number in your sequence is: ${min}`);
 }
+
+//https://drive.google.com/file/d/1FfISTMMKt6yMm_1uua-RNaWMd3xJw948/view?fbclid=IwAR39iR1s35csMA9yTbiZP0vE3E0jN-MlpLz-8rE_G6I_5ABJNTVY_qVS1Lg
