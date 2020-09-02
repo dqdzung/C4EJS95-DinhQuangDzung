@@ -21,16 +21,16 @@
 
 //Update all items to uppercase/lower case letters
 {
-let foodMenu = ["Rice", "Beef", "Pork", "Vegs", "Fish"];
-console.log(`Before: ${foodMenu}`);
-for (let i = 0; i < foodMenu.length; i++) {
-  foodMenu[i] = foodMenu[i].toLowerCase();
-}
-console.log(`Lowercase: ${foodMenu}`);
-for (let i = 0; i < foodMenu.length; i++) {
-  foodMenu[i] = foodMenu[i].toUpperCase();
-}
-console.log(`Uppercase: ${foodMenu}`);
+  let foodMenu = ["Rice", "Beef", "Pork", "Vegs", "Fish"];
+  console.log(`Before: ${foodMenu}`);
+  for (let i = 0; i < foodMenu.length; i++) {
+    foodMenu[i] = foodMenu[i].toLowerCase();
+  }
+  console.log(`Lowercase: ${foodMenu}`);
+  for (let i = 0; i < foodMenu.length; i++) {
+    foodMenu[i] = foodMenu[i].toUpperCase();
+  }
+  console.log(`Uppercase: ${foodMenu}`);
 }
 
 //Update first item in array with user input
@@ -95,4 +95,44 @@ console.log(`Uppercase: ${foodMenu}`);
   console.log(`After: ${movies}`);
 }
 
+//Write a script asking users their username, if the entered username is too long (>15 characters), inform and ask them to re-enter,
+//if the username is short enough (<=15 characters), tell them it is good.
+{
+  let userName = prompt(`Please enter a username:`);
+  while (true) {
+    if (userName.length > 0 && userName.length > 15) {
+      alert(`Username is too long. Maximum 15 characters`);
+      userName = prompt(`Please re-enter username:`);
+    } else {
+      alert(`Your username is ${userName}. Good one`);
+      break;
+    }
+  }
+}
 
+//Write a script to show user a quiz with 4 choices
+//Then ask user to answer, if they enter an invalid choice, tell them it is invalid and ask them to enter their choice again (Invalid choice, the answer must be 1, 2, 3 or 4)
+//If the choice is valid, check the result, if incorrect: Good luck next time, if correct: Bravo, you are correct.
+{
+  let userAnswer = Number(
+    prompt(
+      `What is the shape of the Earth?
+  1. Round
+  2. Flat
+  3. Cube
+  4. Pyramid`
+    )
+  );
+  while (true) {
+    if (!userAnswer) {
+      userAnswer = Number(prompt(`Invalid answer. Please enter a number:`));
+    } else {
+      break;
+    }
+  }
+  if (userAnswer === 1) {
+    alert(`Grats! You're smart.`);
+  } else {
+    alert(`Please go back to school and educate yourself`);
+  }
+}
