@@ -177,8 +177,7 @@ while (true) {
   let toArray = userSequence.split(",");
   let newArray = [];
   for (let i = 0; i < toArray.length; i++) {
-    toArray[i] = `<${toArray[i]}>`;
-    newArray.push(toArray[i]);
+    newArray.push(`<${toArray[i]}>`);
   }
   alert(`${toArray} => ${newArray}`);
 }
