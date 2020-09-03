@@ -42,8 +42,8 @@ while (true) {
       case `D`:
       case `d`:
         const deletePosition = Number(prompt(`Delete position?`));
-        let j = deletePosition - 1;
-        shopItems.splice(j, 1);
+        let i = deletePosition - 1;
+        shopItems.splice(i, 1);
         break;
       case `R`:
       case `r`:
