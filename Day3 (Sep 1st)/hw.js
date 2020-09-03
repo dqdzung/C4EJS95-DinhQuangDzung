@@ -133,7 +133,7 @@ while (true) {
   console.log(`I would get: $${money} for selling`);
 }
 
-// 9. Draw the shape
+// 9. Turtle JS. Draw the shape
 {
   const penColors = [`red`, `gray`, `blue`, `purple`, `cyan`];
   let strokeSize = 25;
