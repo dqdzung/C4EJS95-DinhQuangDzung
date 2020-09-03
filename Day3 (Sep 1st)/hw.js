@@ -86,25 +86,43 @@ while (true) {
 
 // 7. Create an array containing at least 5 numbers, then ask user to enter a number, perform a search to look for the number in the array,
 // if found, inform user the index of it in the array, if not, inform there's not.
+
+//                                                            WRONG!!!!
+//   const myArray = [3, 4, 6, -9, 10, -88, 2];
+//   const userNumber = Number(prompt(`Enter a number to search for:`));
+//   let i = 0;
+//   do {
+//     if (myArray[i] === userNumber) {
+//       alert(`Your number ${userNumber} is FOUND in the array at index ${i}.`);
+//     } else {
+//       alert(`Your number ${userNumber} is NOT in the array!`);
+//     }
+//     i++;
+//     break;
+//   } while (i < myArray.length);
+//                                                            WRONG!!!!
+
 {
   const myArray = [3, 4, 6, -9, 10, -88, 2];
   const userNumber = Number(prompt(`Enter a number to search for:`));
   let i = 0;
-  do {
+  let found;
+  for (i; i < myArray.length; i++) {
     if (myArray[i] === userNumber) {
-      alert(`Your number ${userNumber} is FOUND in the array at index ${i}.`);
-    } else {
-      alert(`Your number ${userNumber} is NOT in the array!`);
+      found = true;
+      alert(`Found number ${userNumber} in array at index ${i}!`);
+      break;
     }
-    i++;
-    break;
-  } while (i < myArray.length);
+  }
+  if (!found) {
+    alert(`Number ${userNumber} not found in array!`);
+  }
 }
 
-// 8. You own a flock of sheeps of various sizes.
+// 8. You own a flock of sheep of various sizes.
 {
   let myFlock = [6, 13, 200, 66, 24, 42, 99];
-  console.log(`Hello, I'm D and these are my sheeps:`);
+  console.log(`Hello, I'm D and these are my sheep:`);
   console.log(...myFlock);
   let month = 0;
   do {
@@ -117,11 +135,11 @@ while (true) {
     console.log(...myFlock);
     month++;
     for (let i = 0; i < myFlock.length; i++) {
-      myFlock[i] += 50; // Sheeps' sizes increase by 50 each month
+      myFlock[i] += 50; // Sheep's sizes increase by 50 each month
     }
     console.log("");
     console.log(`MONTH ${month}`);
-    console.log(`A month has passed, the sheeps grew:`);
+    console.log(`A month has passed, the sheep grew:`);
     console.log(...myFlock);
   } while (month < 5);
   let sum = 0;
