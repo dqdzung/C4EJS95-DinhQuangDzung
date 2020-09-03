@@ -77,11 +77,107 @@ while (true) {
   let toArray = userSequence.split(",");
   let min = toArray[0];
   for (let i = 0; i < toArray.length; i++) {
-      if (toArray[i] < min) {
-          min = toArray[i];
-      }
+    if (toArray[i] < min) {
+      min = toArray[i];
+    }
   }
   alert(`The smallest number in your sequence is: ${min}`);
 }
 
-//https://drive.google.com/file/d/1FfISTMMKt6yMm_1uua-RNaWMd3xJw948/view?fbclid=IwAR39iR1s35csMA9yTbiZP0vE3E0jN-MlpLz-8rE_G6I_5ABJNTVY_qVS1Lg
+// 7. Create an array containing at least 5 numbers, then ask user to enter a number, perform a search to look for the number in the array,
+// if found, inform user the index of it in the array, if not, inform there's not.
+{
+  const myArray = [3, 4, 6, -9, 10, -88, 2];
+  const userNumber = Number(prompt(`Enter a number to search for:`));
+  let i = 0;
+  do {
+    if (myArray[i] === userNumber) {
+      alert(`Your number ${userNumber} is FOUND in the array at index ${i}.`);
+    } else {
+      alert(`Your number ${userNumber} is NOT in the array!`);
+    }
+    i++;
+    break;
+  } while (i < myArray.length);
+}
+
+// 8. You own a flock of sheeps of various sizes.
+{
+  let myFlock = [6, 13, 200, 66, 24, 42, 99];
+  console.log(`Hello, I'm D and these are my sheeps:`);
+  console.log(...myFlock);
+  let month = 0;
+  do {
+    let biggestSheep = Math.max(...myFlock); // Find the biggest to shear
+    console.log(
+      `The biggest one in my flock is ${biggestSheep}. Let's shave it!`
+    );
+    myFlock[myFlock.indexOf(biggestSheep)] = 8; // Shaved sheep returns to original size of 8
+    console.log(`After shearing:`);
+    console.log(...myFlock);
+    month++;
+    for (let i = 0; i < myFlock.length; i++) {
+      myFlock[i] += 50; // Sheeps' sizes increase by 50 each month
+    }
+    console.log("");
+    console.log(`MONTH ${month}`);
+    console.log(`A month has passed, the sheeps grew:`);
+    console.log(...myFlock);
+  } while (month < 5);
+  let sum = 0;
+  for (let j = 0; j < myFlock.length; j++) {
+    sum += Number(myFlock[j]); // Calculate flock's total size
+  }
+  let money = sum * 2;
+  console.log(`My flock's total size is: ${sum}`); // Calculate money
+  console.log(`I would get: $${money} for selling`);
+}
+
+// 9. Draw the shape
+{
+  const penColors = [`red`, `gray`, `blue`, `purple`, `cyan`];
+  let strokeSize = 25;
+  let i = 1;
+  let times = 0;
+  do {
+    color(penColors[i]);
+    for (let j = 0; j < 4; j++) {
+      fd(strokeSize);
+      rt(90);
+    }
+    strokeSize += 25;
+    times++;
+    i++;
+  } while (times < 4);
+}
+
+// 10. Enter a sequence of names, separated by commas. Create new array containing the names, each surrounded with <>
+{
+  const userSequence = prompt(
+    `Enter a sequence of name, separate by comma (,):`
+  );
+  let toArray = userSequence.split(",");
+  let newArray = [];
+  for (let i = 0; i < toArray.length; i++) {
+    toArray[i] = `<${toArray[i]}>`;
+    newArray.push(toArray[i]);
+  }
+  alert(`${toArray} => ${newArray}`);
+}
+
+//11. Enter a sequence of numbers, separated by commas. Create a new array containing odd numbers.
+{
+  const userSequence = prompt(
+    `Enter a sequence of number, separate by comma (,):`
+  );
+  let toArray = userSequence.split(",");
+  let newArray = [];
+  for (let i = 0; i < toArray.length; i++) {
+    if (toArray[i] % 2 !== 0) {
+      newArray.push(toArray[i]);
+    }
+  }
+  alert(`${toArray} => ${newArray}`);
+}
+
+// Remember to learn array map and array filter functions.
