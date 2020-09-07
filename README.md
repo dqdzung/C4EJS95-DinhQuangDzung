@@ -9,12 +9,15 @@
 - Undefined  
 - Null
 - Boolean  
-**Basic operators** for **String** and **Number**  
-**Input/Output**: `prompt()`, `console.log()`, `alert()`  
+### Basic operators for String and Number  
+### Input/Output: 
+`prompt()`, `console.log()`, `alert()`  
 
 ## Day 2 (Aug 29th)
-**Loops**: `for`, `do...while`  
-**Conditional**: `if`, `else if`  
+### Loops: 
+`for`, `do...while`  
+### Conditional: 
+`if`, `else if`  
 
 ## Day 3 (Sep 1st)
 ### Array:  
