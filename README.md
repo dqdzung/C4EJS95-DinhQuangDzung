@@ -1,26 +1,44 @@
 # C4EJS95-DinhQuangDzung
+
 ## Day 1 (Aug 25th)
-### Variable declaration:   
+
+### Variable declaration:
+
 `var`, `let`, `const`  
-**Scope** of `var`, `let`, `const`  
-### Primitive data types:  
-- String  
-- Number  
-- Undefined  
+**Scope** of `var`, `let`, `const`
+
+### Primitive data types:
+
+- String
+- Number
+- Undefined
 - Null
-- Boolean  
-### Basic operators:  
+- Boolean
+
+### Basic operators:
+
 `+`, `-`, `*`, `/`, `%`, `typeOf()`
-### Input/Output: 
-`prompt()`, `console.log()`, `alert()`  
+
+### Input/Output:
+
+`prompt()`, `console.log()`, `alert()`
+
 ## Day 2 (Aug 29th)
-### Loops: 
-`for`, `do...while`  
-### Conditional: 
-`if`, `else if`  
+
+### Loops:
+
+`for`, `do...while`
+
+### Conditional:
+
+`if`, `else if`
+
 ## Day 3 (Sep 1st)
-### Array:  
+
+### Array:
+
 - **I C R U D**  
-`array.length`, `array.push()`, `array.splice()`, `array.split()`
-- **Array** and `for`  
+  `array.length`, `array.push()`, `array.splice()`, `array.split()`
+- **Array** and `for`
+
 ## Day 4 - Object
