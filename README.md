@@ -9,17 +9,18 @@
 - Undefined  
 - Null
 - Boolean  
-### Basic operators for String and Number  
+### Basic operators  
+`+`, `-`, `*`, `/`, `typeOf()`
 ### Input/Output: 
 `prompt()`, `console.log()`, `alert()`  
-
 ## Day 2 (Aug 29th)
 ### Loops: 
 `for`, `do...while`  
 ### Conditional: 
 `if`, `else if`  
-
 ## Day 3 (Sep 1st)
 ### Array:  
 - **I C R U D**  
+`array.length`, `array.push()`, `array.splice()`, `array.split()`
 - **Array** and `for`  
+## Day 4 - Object
