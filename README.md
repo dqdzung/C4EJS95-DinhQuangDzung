@@ -11,11 +11,11 @@
 **Basic operators** for **String** and **Number**
 **Input/Output**: prompt, console.log, alert
 
-### - Day 2 (Aug 29th)
+## - Day 2 (Aug 29th)
 **Loops**: for, do...while
 **Conditional**: if, else if
 
-### - Day 3 (Sep 1st)
+## - Day 3 (Sep 1st)
 **Array**: 
     + I C R U D
     + **Array** and **for**
