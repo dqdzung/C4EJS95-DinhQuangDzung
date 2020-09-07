@@ -1,13 +1,14 @@
 # C4EJS95-DinhQuangDzung
 ## Day 1 (Aug 25th)
-**Variable declaration**: `var`, `let`, `const`  
+### Variable declaration:   
+`var`, `let`, `const`  
 **Scope** of `var`, `let`, `const`  
-**Primitive data types**:  
+### Primitive data types:  
 - String  
 - Number  
 - Undefined  
 - Null
-- Boolean
+- Boolean  
 **Basic operators** for **String** and **Number**  
 **Input/Output**: `prompt()`, `console.log()`, `alert()`  
 
