@@ -3,11 +3,11 @@
 **Variable declaration**: var, let, const
 **Scope** of var, let, const
 **Primitive data types**:
-    + String
-    + Number
-    + Undefined
-    + Null
-    + Boolean
+    - String
+    - Number
+    - Undefined
+    - Null
+    - Boolean
 **Basic operators** for **String** and **Number**
 **Input/Output**: prompt, console.log, alert
 
@@ -17,5 +17,5 @@
 
 ## - Day 3 (Sep 1st)
 **Array**: 
-    + I C R U D
-    + **Array** and **for**
+- I C R U D
+- **Array** and **for**
