@@ -42,3 +42,7 @@
 - **Array** and `for`
 
 ## Day 4 - Object
+### I C R U D
+### Array and Object:
+- Array of Objects
+- Object of Arrays
