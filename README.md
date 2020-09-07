@@ -10,7 +10,7 @@
 - Null
 - Boolean  
 ### Basic operators  
-`+`, `-`, `*`, `/`, `typeOf()`
+`+`, `-`, `*`, `/`, `%`, `typeOf()`
 ### Input/Output: 
 `prompt()`, `console.log()`, `alert()`  
 ## Day 2 (Aug 29th)
