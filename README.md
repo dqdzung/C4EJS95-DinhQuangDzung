@@ -9,7 +9,7 @@
 - Undefined  
 - Null
 - Boolean  
-### Basic operators  
+### Basic operators:  
 `+`, `-`, `*`, `/`, `%`, `typeOf()`
 ### Input/Output: 
 `prompt()`, `console.log()`, `alert()`  
