@@ -251,3 +251,13 @@
 }
 
 //13. Draw n polygon(s), n is user defined
+{
+  const numberOfPolygon = prompt("Enter number of polygons:");
+  let angle = [(polygonSides - 2) * 180] / polygonSides;
+  for (let i = 3; i < numberOfPolygon; i++) {
+    for (let j = 0; j < i; J++) {
+      fd(50);
+      rt(180 - angle);
+    }
+  }
+}
