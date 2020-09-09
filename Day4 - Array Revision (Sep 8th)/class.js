@@ -13,3 +13,4 @@ console.log(`Before ${myArray}`);
   console.log(`After ${myArray}`);
 }
 
+//Optimize it
