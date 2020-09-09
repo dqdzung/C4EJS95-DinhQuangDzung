@@ -126,7 +126,7 @@ console.log(myMovie);
 for (let i = 0; ; i++) {
   console.log(`Title: ${myMovie.title}`);
   console.log(`Year: ${myMovie.year}`);
-  console.log(`Casts: ${myMovie.characters}`);
+  console.log("Casts:",...myMovie.characters);;
   break;
 }
 myMovie.characters.push("Sator");
