@@ -91,10 +91,8 @@ let myDictionary = {
   "pm": "The short version of Project Manager, the person in charge of the final result of a project",
   "ui/ux": "UI means User Interface, UX mean User Experience, are the process to define how your products looks and feels",
 };
-const dictGreeting = "Hi, welcome to my Dictionary!";
-alert(dictGreeting);
 while (true) {
-const userWord = prompt("Looking up a word?").toLowerCase();
+const userWord = prompt("Welcome to my Dictionary. Looking up a word?").toLowerCase();
 const noAnswer = `Can't find your word: ${userWord}, add an explanation`;
 let found;
 if (userWord !== "") {
