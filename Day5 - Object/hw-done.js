@@ -113,5 +113,6 @@ if (userWord !== "") {
       }
     }
   }
+  else {break;}
 }
 }
