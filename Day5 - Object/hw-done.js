@@ -92,27 +92,173 @@ let myDictionary = {
   "ui/ux": "UI means User Interface, UX mean User Experience, are the process to define how your products looks and feels",
 };
 while (true) {
-const userWord = prompt("Welcome to my Dictionary. Looking up a word?").toLowerCase();
-const noAnswer = `Can't find your word: ${userWord}, add an explanation`;
-let found;
-if (userWord !== "") {
-  for (const dictWord in myDictionary) {
-    let dictAnswer = `${dictWord}:\n${myDictionary[dictWord]}`;
-    if (userWord === dictWord) {
-      found = true;
-      alert(dictAnswer);
-    }
-  }
-  if (!found) {
-    while (true) {
-      const newDictEntry = prompt(noAnswer);
-      if (newDictEntry !== "" && newDictEntry !== null && newDictEntry !== undefined) {
-        myDictionary[userWord] = newDictEntry;
-        alert("New entry added!");
-        break;
+  const userWord = prompt(
+    "Welcome to my Dictionary. Looking up a word?"
+  ).toLowerCase();
+  const noAnswer = `Can't find your word: ${userWord}, add an explanation`;
+  let found;
+  if (userWord !== "") {
+    for (const dictWord in myDictionary) {
+      let dictAnswer = `${dictWord}:\n${myDictionary[dictWord]}`;
+      if (userWord === dictWord) {
+        found = true;
+        alert(dictAnswer);
       }
     }
+    if (!found) {
+      while (true) {
+        const newDictEntry = prompt(noAnswer);
+        if (
+          newDictEntry !== "" &&
+          newDictEntry !== null &&
+          newDictEntry !== undefined
+        ) {
+          myDictionary[userWord] = newDictEntry;
+          alert("New entry added!");
+          break;
+        }
+      }
+    } else {
+      break;
+    }
   }
-  else {break;}
 }
+
+//5. Array of Products
+let myProducts = [
+  {
+    name: "Xiaomi portable charger 20000mah",
+    brand: "Xiaomi",
+    price: 428,
+    color: "White",
+    category: "Charger",
+  },
+  {
+    name: "VSmart Active 1",
+    brand: "VSmart",
+    price: 5487,
+    color: "Black",
+    category: "Phone",
+  },
+  {
+    name: "IPhone X",
+    brand: "Apple",
+    price: 21490,
+    color: "Gray",
+    category: "Phone",
+  },
+  {
+    name: "Samsung Galaxy A9",
+    brand: "Samsung",
+    price: 8490,
+    color: "Blue",
+    category: "Phone",
+  },
+];
+const LENGTH = myProducts.length;
+
+//5.1 Log "name" and "price" of all products
+{
+  for (let i = 0; i < LENGTH; i++) {
+    let { name, price } = myProducts[i];
+    console.log("--------------------------------------");
+    console.log(`Name: ${name}`);
+    console.log(`Price: ${price}`);
+  }
+}
+
+//5.2
+{
+  for (let i = 0; i < LENGTH; i++) {
+    let { name, price } = myProducts[i],
+      position = i + 1;
+    console.log(`#${position}. ${name}`);
+    console.log(`    Price: ${price}`);
+  }
+  while (true) {
+    const inputPosition = Number(prompt("Enter a product position"));
+    if (inputPosition <= LENGTH && inputPosition > 0) {
+      let index = inputPosition - 1,
+        product = myProducts[index];
+      console.clear();
+      for (const property in product) {
+        console.log(`${property}: ${product[property]}`);
+      }
+      break;
+    } else {
+      alert(`Product at position ${inputPosition} doesn't exist!`);
+    }
+  }
+}
+
+//5.3
+{
+  let found;
+  while (true) {
+    const inputCategory = prompt("Enter a category:").toLowerCase();
+    found = false;
+    for (let i = 0; i < LENGTH; i++) {
+      let { name, price, category } = myProducts[i];
+      if (inputCategory === category.toLowerCase()) {
+        console.log("--------------------------------------");
+        console.log(`Name: ${name}`);
+        console.log(`Price: ${price}`);
+        found = true;
+      }
+    }
+    if (found === false) {
+      alert("Category doesn't exist!");
+    } else {
+      break;
+    }
+  }
+}
+
+//5.4
+myProducts[0].providers = ["Phukienzero", "Dientuccc"];
+myProducts[1].providers = ["Tgdd", "Ddghn", "VhStore"];
+myProducts[2].providers = ["Tgdd"];
+myProducts[3].providers = ["Tgdd"];
+{
+  for (let i = 0; i < LENGTH; i++) {
+    let { name, price, providers } = myProducts[i],
+      position = i + 1;
+    console.log(`#${position}. ${name}`);
+    console.log(`    Price: ${price}`);
+    console.log("    Providers:", ...providers);
+  }
+}
+
+//5.5
+{
+  let found;
+  while (true) {
+    const inputProvider = prompt("Enter a provider:").toLowerCase();
+    found = false;
+    for (let i = 0; i < LENGTH; i++) {
+      let product = myProducts[i],
+        { name, brand, price, color, category, providers } = product;
+      for (let j = 0; j < providers.length; j++) {
+        let indexProvider = providers[j].toLowerCase().indexOf(inputProvider);
+        if (indexProvider !== -1) {
+          console.log("--------------------------------------");
+          // console.log(`Name: ${name}`);
+          // console.log(`Brand: ${brand}`);
+          // console.log(`Price: ${price}`);
+          // console.log(`Color: ${color}`);
+          // console.log(`Category: ${category}`);
+          // console.log(`Providers: ${providers}`);
+          for (const property in product) {
+            console.log(`${property}: ${product[property]}`);
+            found = true;
+          }
+        }
+      }
+    }
+    if (found === false) {
+      alert("Can't find provider!");
+    } else {
+      break;
+    }
+  }
 }
