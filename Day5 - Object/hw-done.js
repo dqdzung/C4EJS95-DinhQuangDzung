@@ -1,19 +1,42 @@
 // Optimize Bubble sort
-const sortArr = [13, 33, 68, 32, 33, 17, 33, 70, 63, 82, 76, 15, 19, 26, 95, 45, 89, 58, 82, 16];
+const sortArr = [
+  13,
+  33,
+  68,
+  32,
+  33,
+  17,
+  33,
+  70,
+  63,
+  82,
+  76,
+  15,
+  19,
+  26,
+  95,
+  45,
+  89,
+  58,
+  82,
+  16,
+];
 let swapped;
 const length = sortArr.length;
 console.log(`Before ${sortArr}`);
 do {
-  swapped = false;                      // Entering "for" loop, "swapped" is false
-  for (let i = 0; i < length; i++) {    // "for" loops through array and
-    if (sortArr[i] > sortArr[i + 1]) {  // executes a swap if condition is true
+  swapped = false; // Entering "for" loop, "swapped" is false
+  for (let i = 0; i < length; i++) {
+    // "for" loops through array and
+    if (sortArr[i] > sortArr[i + 1]) {
+      // executes a swap if condition is true
       let temp = sortArr[i];
       sortArr[i] = sortArr[i + 1];
       sortArr[i + 1] = temp;
-      swapped = true;                   // Exiting "for" loop, "swapped" is true after a swap || "swapped" stays false if no swap is done
+      swapped = true; // Exiting "for" loop, "swapped" is true after a swap || "swapped" stays false if no swap is done
     }
-  }                                     
-} while (swapped);                      // "swapped" is true, "do...while" loops backs || "swapped" stays false, "do...while" breaks
+  }
+} while (swapped); // "swapped" is true, "do...while" loops backs || "swapped" stays false, "do...while" breaks
 
 // Object Homework
 let inventory = {
@@ -38,7 +61,8 @@ const product = {
 for (let x in product) {
   console.log(x); // "x" receives "keys" from "product"
 }
-for (let x in product) { // use "for" loop to print
+for (let x in product) {
+  // use "for" loop to print
   console.log(`${x}:`, product[x]);
 }
 
@@ -56,7 +80,8 @@ let { subject, dueDate, assignTo } = task;
 // Outermost layer is an Object
 // hits property is an Array
 
-const jobSearch = "https://gist.githubusercontent.com/qhuydtvt/6870e14e544455f6de6081a83e365b5b/raw/adb147e19259e3ee9b093cb71228026e2417ab09/jobs.js" 
+const jobSearch =
+  "https://gist.githubusercontent.com/qhuydtvt/6870e14e544455f6de6081a83e365b5b/raw/adb147e19259e3ee9b093cb71228026e2417ab09/jobs.js";
 // Replace link with the its content to run the codes below this line
 
 // Get info from each "hit" array
@@ -72,9 +97,10 @@ for (let i = 0; i < length; i++) {
   } = jobSearch.hits[i]; // Deconstruct each "jobSearch.hits" object to get data about job title, location, salary, benefits, skills and requirements
   console.log("");
   console.log(jobTitle);
-  console.log("Salary:",jobSalary);
+  console.log("Salary:", jobSalary);
   console.log("Benefits:");
-  for (let j = 0; j < benefits.length; j++) { // Access "benefits" array
+  for (let j = 0; j < benefits.length; j++) {
+    // Access "benefits" array
     let { benefitName, benefitValue } = benefits[j]; // Deconstruct each "benefits[j]" object to get "benefitName" and "benefitValue"
     console.log(`${benefitName}:`, benefitValue);
   }
@@ -85,11 +111,15 @@ for (let i = 0; i < length; i++) {
 
 // 4. Dictionary
 let myDictionary = {
-  "debug": "The process of figuring out why your program has a certain error and how to fix it",
-  "done": "When your task is complete, the only thing you have to do is to wait for users to use it (no additional codes or actions needed)",
-  "defect": "The formal word for 'error'",
-  "pm": "The short version of Project Manager, the person in charge of the final result of a project",
-  "ui/ux": "UI means User Interface, UX mean User Experience, are the process to define how your products looks and feels",
+  debug:
+    "The process of figuring out why your program has a certain error and how to fix it",
+  done:
+    "When your task is complete, the only thing you have to do is to wait for users to use it (no additional codes or actions needed)",
+  defect: "The formal word for 'error'",
+  pm:
+    "The short version of Project Manager, the person in charge of the final result of a project",
+  "ui/ux":
+    "UI means User Interface, UX mean User Experience, are the process to define how your products looks and feels",
 };
 while (true) {
   const userWord = prompt(
@@ -280,43 +310,54 @@ for (let i = 0; i < learningTasks.length; i++) {
   console.log(`   Complete: ${completion}`);
 }
 console.log("---------------------------------------------------------");
-const userPrompt = prompt(
-  "What do you want to do (New, Update, Complete, Delete)"
-).toLowerCase();
-switch (userPrompt) {
-  default:
-    alert("Invalid command, please enter again!");
+while (true) {
+  const userPrompt = prompt(
+    "What do you want to do (Read, New, Update, Complete, Delete, Quit)"
+  ).toLowerCase();
+  if (userPrompt === "quit") {
     break;
-  case "new": // 6.2 Add new task
-    const newTask = prompt("Add new task:");
-    learningTasks.push({ task: newTask, completion: false });
-    break;
-  case "update": // 6.3 Update task
-    const updatePosition = Number(prompt("Enter position to update:")),
-      i = updatePosition - 1,
-      updateTask = prompt("New title:");
-    learningTasks[i].task = updateTask;
-    break;
-  case "complete": // 6.4 Complete task
-    const completePosition = Number(
-        prompt("Enter position of task to complete:")
-      ),
-      j = completePosition - 1;
-    learningTasks[j].completion = true;
-    break;
-  case "delete": // 6.5 Delete task
-    const deletePosition = Number(prompt("Enter position to delete")),
-      k = deletePosition - 1;
-    delete learningTasks[k];
-    break;
-}
-// 6.6 Better logging
-for (let i = 0; i < learningTasks.length; i++) {
-  let { task, completion } = learningTasks[i],
-    position = i + 1,
-    completed = "[ ]";
-  if (completion === true) {
-    completed = "[X]";
+  } else {
+    switch (userPrompt) {
+      default:
+        alert("Invalid command, please enter again!");
+        break;
+      case "new": // 6.2 Add new task
+        const newTask = prompt("Add new task:");
+        learningTasks.push({ task: newTask, completion: false });
+        alert("New task added.");
+        break;
+      case "update": // 6.3 Update task
+        const updatePosition = Number(prompt("Enter position to update:")),
+          i = updatePosition - 1,
+          updateTask = prompt("New title:");
+        learningTasks[i].task = updateTask;
+        alert(`Task #${updatePosition} updated.`);
+        break;
+      case "complete": // 6.4 Complete task
+        const completePosition = Number(
+            prompt("Enter position of task to complete:")
+          ),
+          j = completePosition - 1;
+        learningTasks[j].completion = true;
+        alert(`Task #${completePosition} completed.`);
+        break;
+      case "delete": // 6.5 Delete task
+        const deletePosition = Number(prompt("Enter position to delete")),
+          k = deletePosition - 1;
+        learningTasks.splice(k, 1);
+        alert(`Task #${deletePosition} deleted.`);
+        break;
+      case "read": // 6.6 Better logging
+        console.clear();
+        for (let i = 0; i < learningTasks.length; i++) {
+          let { task, completion } = learningTasks[i],
+            position = i + 1,
+            completed = "[ ]";
+          if (completion === true) {
+            completed = "[X]";
+          }
+          console.log(`${position}. ${completed} ${task}`);
+        }
+    }
   }
-  console.log(`${position}. ${completed} ${task}`);
 }
