@@ -262,3 +262,61 @@ myProducts[3].providers = ["Tgdd"];
     }
   }
 }
+
+// 6.
+let learningTasks = [
+  { task: "HTML", completion: false },
+  { task: "CSS", completion: false },
+  { task: "Basics of JS", completion: false },
+  { task: "Node Package Manager (npm)", completion: false },
+  { task: "Git", completion: false },
+];
+// 6.1 Log tasks
+console.log("This is your learning task to front-end developer career:");
+for (let i = 0; i < learningTasks.length; i++) {
+  let { task, completion } = learningTasks[i],
+    position = i + 1;
+  console.log(`${position}. ${task}`);
+  console.log(`   Complete: ${completion}`);
+}
+console.log("---------------------------------------------------------");
+const userPrompt = prompt(
+  "What do you want to do (New, Update, Complete, Delete)"
+).toLowerCase();
+switch (userPrompt) {
+  default:
+    alert("Invalid command, please enter again!");
+    break;
+  case "new": // 6.2 Add new task
+    const newTask = prompt("Add new task:");
+    learningTasks.push({ task: newTask, completion: false });
+    break;
+  case "update": // 6.3 Update task
+    const updatePosition = Number(prompt("Enter position to update:")),
+      i = updatePosition - 1,
+      updateTask = prompt("New title:");
+    learningTasks[i].task = updateTask;
+    break;
+  case "complete": // 6.4 Complete task
+    const completePosition = Number(
+        prompt("Enter position of task to complete:")
+      ),
+      j = completePosition - 1;
+    learningTasks[j].completion = true;
+    break;
+  case "delete": // 6.5 Delete task
+    const deletePosition = Number(prompt("Enter position to delete")),
+      k = deletePosition - 1;
+    delete learningTasks[k];
+    break;
+}
+// 6.6 Better logging
+for (let i = 0; i < learningTasks.length; i++) {
+  let { task, completion } = learningTasks[i],
+    position = i + 1,
+    completed = "[ ]";
+  if (completion === true) {
+    completed = "[X]";
+  }
+  console.log(`${position}. ${completed} ${task}`);
+}
