@@ -494,3 +494,71 @@ for (let i = 0; i < cmds.length; i++) {
       break;
   }
 }
+
+// 15.
+const jobData =
+  "https://gist.githubusercontent.com/qhuydtvt/6870e14e544455f6de6081a83e365b5b/raw/adb147e19259e3ee9b093cb71228026e2417ab09/jobs.js";
+
+// Replace link with the its content to run the codes below this line
+
+console.log("Job hits:", jobData.hits); // 15.1
+console.log(jobData.hits[0]); // 15.2
+let { jobTitle, benefits } = jobData.hits[0];
+console.log(`First job title:\n${jobTitle}`); // 15.3
+console.log(benefits); // 15.4
+console.log("First job benefits:");
+for (let i = 0; i < benefits.length; i++) {
+  // 15.5
+  let { benefitValue } = benefits[i];
+  console.log("-", benefitValue);
+}
+
+// 15.6
+for (let i = 0; i < jobData.hits.length; i++) {
+  let { jobTitle, benefits } = jobData.hits[i];
+  console.log(jobTitle);
+  console.log("Benefits:");
+  for (let j = 0; j < benefits.length; j++) {
+    let { benefitValue } = benefits[j];
+    console.log("-", benefitValue);
+  }
+  console.log("------------------------------------------------------------");
+}
+
+// 15.7
+for (let i = 0; i < length; i++) {
+  let { jobTitle, locationVIs, jobSalary, benefits, skills } = jobData.hits[i];
+  console.log("Title:", jobTitle);
+  console.log(`Salary: ${jobSalary}$`);
+  console.log("Location:", ...locationVIs);
+  console.log("Benefits:");
+  for (let j = 0; j < benefits.length; j++) {
+    let { benefitValue } = benefits[j];
+    console.log("-", benefitValue);
+  }
+  console.log("Skills:");
+  for (let k = 0; k < skills.length; k++) {
+    console.log("-", skills[k]);
+  }
+  console.log("------------------------------------------------------------");
+}
+
+// 16.
+const oldData = {
+  friedRice: {
+    Price: 30,
+    vnName: "Com rang dua bo",
+  },
+  noodles: {
+    price: 20,
+    vnName: "My tom chanh",
+  },
+  pho: {
+    price: 35,
+    vnName: "Pho bo tai chin",
+  },
+};
+let newData = { ...oldData }; // Copy oldData properties to newData
+console.log("before:", newData);
+delete newData.noodles; // Delete noodles property from newData
+console.log("after:", newData);
