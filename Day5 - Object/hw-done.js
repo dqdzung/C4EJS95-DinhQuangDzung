@@ -1,42 +1,19 @@
 // Optimize Bubble sort
-const sortArr = [
-  13,
-  33,
-  68,
-  32,
-  33,
-  17,
-  33,
-  70,
-  63,
-  82,
-  76,
-  15,
-  19,
-  26,
-  95,
-  45,
-  89,
-  58,
-  82,
-  16,
-];
+const sortArr = [13,33,68,32,33,17,33,70,63,82,76,15,19,26,95,45,89,58,82,16];
 let swapped;
 const length = sortArr.length;
 console.log(`Before ${sortArr}`);
 do {
-  swapped = false; // Entering "for" loop, "swapped" is false
-  for (let i = 0; i < length; i++) {
-    // "for" loops through array and
-    if (sortArr[i] > sortArr[i + 1]) {
-      // executes a swap if condition is true
+  swapped = false;                      // Entering "for" loop, "swapped" is false
+  for (let i = 0; i < length; i++) {    // "for" loops through array and
+    if (sortArr[i] > sortArr[i + 1]) {  // executes a swap if condition is true
       let temp = sortArr[i];
       sortArr[i] = sortArr[i + 1];
       sortArr[i + 1] = temp;
-      swapped = true; // Exiting "for" loop, "swapped" is true after a swap || "swapped" stays false if no swap is done
+      swapped = true;                   // Exiting "for" loop, "swapped" is true after a swap || "swapped" stays false if no swap is done
     }
   }
-} while (swapped); // "swapped" is true, "do...while" loops backs || "swapped" stays false, "do...while" breaks
+} while (swapped);                      // "swapped" is true, "do...while" loops backs || "swapped" stays false, "do...while" breaks
 
 // Object Homework
 let inventory = {
