@@ -436,7 +436,7 @@ for (let i = 0; i < cmds.length; i++) {
   }
 }
 
-// 11.
+// 11+12.
 clear();
 const cmds = [
   { shape: "circle", x: 0, y: -20, radius: 60 },
