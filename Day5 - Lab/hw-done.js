@@ -118,3 +118,47 @@ if (quizStart === true) {
     }
   }
 }
+
+// Part 2:
+const jobData =
+  "https://gist.githubusercontent.com/qhuydtvt/6870e14e544455f6de6081a83e365b5b/raw/adb147e19259e3ee9b093cb71228026e2417ab09/jobs.js";
+// Replace link with the its content to run the codes below this line
+
+console.log("Job hits:", jobData.hits);
+console.log(jobData.hits[0]);
+let { jobTitle, benefits } = jobData.hits[0];
+console.log(`First job title:\n${jobTitle}`);
+console.log(benefits);
+console.log("First job benefits:");
+for (let i = 0; i < benefits.length; i++) {
+  let { benefitValue } = benefits[i];
+  console.log("-", benefitValue);
+}
+
+for (let i = 0; i < jobData.hits.length; i++) {
+  let { jobTitle, benefits } = jobData.hits[i];
+  console.log(jobTitle);
+  console.log("Benefits:");
+  for (let j = 0; j < benefits.length; j++) {
+    let { benefitValue } = benefits[j];
+    console.log("-", benefitValue);
+  }
+  console.log("------------------------------------------------------------");
+}
+
+for (let i = 0; i < length; i++) {
+  let { jobTitle, locationVIs, jobSalary, benefits, skills } = jobData.hits[i];
+  console.log("Title:", jobTitle);
+  console.log(`Salary: ${jobSalary}$`);
+  console.log("Location:", ...locationVIs);
+  console.log("Benefits:");
+  for (let j = 0; j < benefits.length; j++) {
+    let { benefitValue } = benefits[j];
+    console.log("-", benefitValue);
+  }
+  console.log("Skills:");
+  for (let k = 0; k < skills.length; k++) {
+    console.log("-", skills[k]);
+  }
+  console.log("------------------------------------------------------------");
+}
