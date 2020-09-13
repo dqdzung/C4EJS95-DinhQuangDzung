@@ -1,3 +1,5 @@
+// Lab
+// Part 1:
 const quizzes = [
   {
     question: "What is the color of Donald Duck’s bow tie?",
@@ -27,7 +29,7 @@ const quizzes = [
   },
   {
     question: "How would one say goodbye in Spanish?",
-    choice: ["Adios", " Hola", "Au Revoir", "Salir"],
+    choice: ["Adios", "Hola", "Au Revoir", "Salir"],
     correct: 1,
   },
   {
@@ -67,35 +69,50 @@ const quizzes = [
     correct: 1,
   },
 ];
-let toAsk = quizzes,
+let toAsk = quizzes, // Copy "quizzes" to another array called "toAsk"
   quizStart = confirm(
     `Welcome to the quiz!\nThere are ${toAsk.length} questions.\nPlease answer with a NUMBER, invalid inputs count as WRONG!\nHit "OK" to start or "Cancel" to quit.\nNOTE: Once started, you won't be able to quit until you finished all 12!`
   ),
   userScore = 0;
 if (quizStart === true) {
+  // "confirm" input returns true/false when user clicks OK/Cancel. Quiz only starts with "OK".
+
   function randomIndex() {
     return Math.floor(Math.random() * toAsk.length);
   }
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) { // from i to 1 ("i" here is last index of the array)
+      let j = Math.floor(Math.random() * (i + 1)); // randomize j from 0 to i
+      // Swap array[i] and array[j]
+      let temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+  }
   while (true) {
+    // Loop, every iteration, a random question is picked, asked and then deleted, until none remains
     if (toAsk.length > 0) {
-      let questionIndex = randomIndex(),
+      // Check if there are questions remain
+      let questionIndex = randomIndex(), // Get a random question index
         userQuestion = toAsk[questionIndex],
         { question, choice, correct } = userQuestion,
         choiceList = "",
-        correctAns = choice[(correct - 1)];
-      console.log("Question was asked");
+        correctAns = choice[correct - 1]; // Store correct answer to compare later
+      shuffleArray(choice); // Shuffle the choices
+      console.log("Question was asked"); // For testing purposes, user doesn't see this
       for (let i = 0; i < choice.length; i++) {
-        choiceList += `\n${i + 1}. ${choice[i]}`;
+        choiceList += `\n${i + 1}. ${choice[i]}`; // Display choices in a nice format
       }
       const userAnswer = Number(prompt(`${question} ${choiceList}`));
-      if (userAnswer === correct) {
-        alert("Grats. You're right");
+      if (choice[userAnswer - 1] === correctAns) {
+        alert("Grats. You're right!");
         userScore++;
       } else {
         alert(`Better luck next time. Correct answer was "${correctAns}".`);
       }
-      toAsk.splice(questionIndex, 1);
+      toAsk.splice(questionIndex, 1); // Delete the question after, so it only appears once.
     } else {
+      //All questions are asked -> no question left, break the loop
       alert(`That's all! You scored ${userScore}/12!`);
       break;
     }
