@@ -39,12 +39,12 @@ const quizzes = [
 const LENGTH = quizzes.length;
 let randomIndex = Math.floor(Math.random() * LENGTH),
   randomQuestion = quizzes[randomIndex],
+  choiceList = "";
   { question, choice, correct, done } = randomQuestion;
-const userAnswer = Number(
-  prompt(
-    `${question} \n1.${choice[0]}\n2.${choice[1]}\n3.${choice[2]}\n4.${choice[3]}`
-  )
-);
+for (let i = 0; i < choice.length; i++) {
+  choiceList += `\n${i + 1}. ${choice[i]}`;
+}
+const userAnswer = Number(prompt(`${question} ${choiceList}`));
 if (userAnswer === correct) {
   alert("Grats. You're right");
 } else {
