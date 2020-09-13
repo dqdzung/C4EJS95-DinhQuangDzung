@@ -124,18 +124,17 @@ const jobData =
   "https://gist.githubusercontent.com/qhuydtvt/6870e14e544455f6de6081a83e365b5b/raw/adb147e19259e3ee9b093cb71228026e2417ab09/jobs.js";
 // Replace link with the its content to run the codes below this line
 
-console.log("Job hits:", jobData.hits);
-console.log(jobData.hits[0]);
+console.log("Job hits:", jobData.hits); // (2)
+console.log(jobData.hits[0]); // (3)
 let { jobTitle, benefits } = jobData.hits[0];
-console.log(`First job title:\n${jobTitle}`);
-console.log(benefits);
+console.log(`First job title:\n${jobTitle}`); // (4)
+console.log(benefits); // (5)
 console.log("First job benefits:");
 for (let i = 0; i < benefits.length; i++) {
   let { benefitValue } = benefits[i];
-  console.log("-", benefitValue);
+  console.log("-", benefitValue); // (6)
 }
-
-for (let i = 0; i < jobData.hits.length; i++) {
+for (let i = 0; i < jobData.hits.length; i++) { // (7)
   let { jobTitle, benefits } = jobData.hits[i];
   console.log(jobTitle);
   console.log("Benefits:");
@@ -145,8 +144,7 @@ for (let i = 0; i < jobData.hits.length; i++) {
   }
   console.log("------------------------------------------------------------");
 }
-
-for (let i = 0; i < length; i++) {
+for (let i = 0; i < length; i++) { // (8)
   let { jobTitle, locationVIs, jobSalary, benefits, skills } = jobData.hits[i];
   console.log("Title:", jobTitle);
   console.log(`Salary: ${jobSalary}$`);
@@ -162,3 +160,5 @@ for (let i = 0; i < length; i++) {
   }
   console.log("------------------------------------------------------------");
 }
+
+// Part 3:
