@@ -162,3 +162,122 @@ for (let i = 0; i < length; i++) { // (8)
 }
 
 // Part 3:
+// (1)
+const wordArray = ["to","be","that","of","elon","to","this","now","back","cool","hey","love","of","life","that","rain","summer","color","now","of","hat","late","sorry","my","team"];
+const LENGTH = wordArray.length;
+let countWord = {}; // Empty object, property is undefined (important for the "if" statement later)
+for (i = 0; i < LENGTH; i++) {
+  let wordToCount = wordArray[i];
+  if (countWord[wordToCount]) { // Check if the word already exists in object as a property or not
+    countWord[wordToCount]++; // Word is there, +1 to its value
+  } else {
+    countWord[wordToCount] = 1; // Word is not there, add word to object with value = 1
+  }
+}
+for (const property in countWord) {
+  console.log(`${property}: ${countWord[property]}`)
+}
+// (2)
+const inventory = [
+  {
+    name: "HP Envy 13aq",
+    price: 21000,
+    brand: "HP",
+    quantity: 5,
+  },
+  {
+    name: "Dell XPS 9370",
+    price: 30000,
+    brand: "Dell",
+    quantity: 1,
+  },
+
+  {
+    name: "Dell Inspiron 3567",
+    price: 9300,
+    brand: "Dell",
+    quantity: 12,
+  },
+
+  {
+    name: "Dell Latitude E5450",
+    price: 8600,
+    brand: "Dell",
+    quantity: 2,
+  },
+
+  {
+    name: "Asus Zenbook",
+    brand: "Asus",
+    price: 20000,
+    quantity: 4,
+  },
+
+  {
+    name: "HP Pavilion",
+    brand: "HP",
+    price: 14000,
+    quantity: 7,
+  },
+];
+// (3)
+let inventoryByBrand = {};
+for (let i = 0; i < inventory.length; i++) {
+  let { brand } = inventory[i],
+    brandArray = brand.toLocaleLowerCase();
+  if (inventoryByBrand[brandArray]) {
+    // Check if brandArray exists in object inventoryByBrand
+    inventoryByBrand[brandArray].push(inventory[i]); // If it's there, add inventory[i] to the array
+  } else {
+    inventoryByBrand[brandArray] = [inventory[i]]; // If it's not, create the array with element inventory[i]
+  }
+}
+console.log(inventoryByBrand);
+// (4) (5) (6) (7)
+while (true) {
+  const askBrand = prompt("Enter brand:").toLowerCase();
+  let inStock = false;
+  for (const property in inventoryByBrand) {
+    if (askBrand === property) {
+      inStock = true;
+    }
+  }
+  if (inStock) {
+    let length = inventoryByBrand[askBrand].length,
+      nameList = "",
+      totalValue = 0;
+    for (let i = 0; i < length; i++) {
+      let { name, price, quantity } = inventoryByBrand[askBrand][i];
+      nameList += `${name}\n`;
+      totalValue += price * quantity;
+    }
+    alert(
+      `We have ${length} generation(s) of '${askBrand.toUpperCase()}' in stock:\n\n${nameList}\nTotal value: ${(
+        totalValue * 1000
+      ).toLocaleString("da-DK", { style: "currency", currency: "VND" })}`
+    );
+    break;
+  } else {
+    alert(
+      `No '${askBrand.toUpperCase()}' in stock. Please choose another brand.`
+    );
+  }
+}
+// function checkStock(brand) {
+//   brand = brand.toLowerCase();
+//   let inStock = false;
+//   for (const property in inventoryByBrand) {
+//     if (brand === property) {
+//       inStock = true;
+//     }
+//   }
+//   if (inStock) {
+//     let stock = `"${brand.toUpperCase()}" stock: ${
+//       inventoryByBrand[brand].length
+//     }`;
+//     return stock;
+//   } else {
+//     let noStock = `No stock of "${brand.toUpperCase()}"`;
+//     return noStock;
+//   }
+// }
