@@ -282,3 +282,28 @@ while (true) {
 //   }
 // }
 
+// Study HTML
+
+// Coding challenge 4:
+const people = [
+  { name: "John", height: 170, mass: 80 },
+  { name: "Mark", height: 165, mass: 60 },
+  { name: "Jane", height: 159, mass: 50 },
+  { name: "Joe", height: 170, mass: 80 },
+];
+let dataBMI = [];
+for (let i = 0; i < people.length; i++) {
+  let person = people[i];
+  person.calculateBMI = function () {
+    this.height = this.height / 100;
+    return Number((this.mass / (this.height * this.height)).toFixed(2));
+  };
+  person.BMI = person.calculateBMI();
+  dataBMI.push(person.BMI);
+}
+for (let i = 0; i < people.length; i++) {
+  let person = people[i];
+  if (person.BMI === Math.max(...dataBMI)) {
+    console.log(`${person.name} has the highest BMI of ${person.BMI}`);
+  }
+}
