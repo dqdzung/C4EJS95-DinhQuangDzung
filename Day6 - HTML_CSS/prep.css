@@ -1,0 +1,52 @@
+p {
+  color: red;
+}
+
+#div2 {
+  background-color: #00ff00;
+}
+
+.font24px {
+  font-size: 24px;
+}
+
+ul > li {
+  font-weight: bold;
+}
+
+[target="_blank"] {
+  color: yellow;
+}
+
+div > span {
+  font-style: italic;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.image {
+  width: 800px;
+  height: 300px;
+  background-image: url(https://pbs.twimg.com/profile_images/988272404915875840/lE7ZkrO-_400x400.jpg);
+  background-repeat: no-repeat;
+}
+
+#divOne {
+background-size: contain;
+}
+#divTwo {
+    background-size: cover;
+}
+#firstdiv {
+  width: fit-content;
+  height: 135px;
+  background-image: url(https://cdn.worldvectorlogo.com/logos/google-icon.svg);
+  background-size: 75px;
+  background-repeat: no-repeat;
+  border-color: blue;
+  
+}
