@@ -1,0 +1,90 @@
+.container-main {
+  display: flex;
+  border: solid black;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+}
+#name {
+  margin: 0px auto;
+  border: green solid;
+}
+
+.container-content {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  border: solid blue;
+  flex-wrap: wrap-reverse;
+}
+
+#container-left-side {
+  max-width: 400px;
+  width: 100%;
+  float: left;
+  border: solid greenyellow;
+  margin: 20px auto;
+}
+
+.left-side-title {
+  display: flex;
+  border: solid blueviolet;
+  padding-left: 25px;
+}
+
+.left-side-title > div {
+  width: 150px;
+}
+
+.left-side-content {
+  padding: 10px 45px;
+}
+
+.education-content {
+  display: inline-block;
+}
+
+.left-side-title > .far,
+.left-side-title > .fas {
+  margin: auto;
+  font-size: 35px;
+  padding-left: 100px;
+}
+.cat-bar {
+  margin-bottom: 20px;
+}
+
+#container-right-side {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  width: 100%;
+  float: right;
+  border: solid red;
+  margin: 20px auto;
+}
+
+img {
+  display: block;
+  width: 75%;
+  margin: auto;
+}
+
+#profile-content > div,
+#profile-content > p {
+  margin: 25px;
+}
+
+#social-bar {
+  display: flex;
+  border: darkturquoise solid;
+  align-self: center;
+  align-items: flex-end;
+  height: 100%
+}
+
+.fab {
+  margin-right: 50px;
+ }

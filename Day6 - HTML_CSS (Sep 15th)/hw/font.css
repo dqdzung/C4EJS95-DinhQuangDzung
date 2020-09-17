@@ -1,0 +1,35 @@
+.font {
+  font-family: cursive;
+}
+#name {
+  font-size: 3rem;
+}
+.left-side-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 100px;
+}
+
+.left-side-content {
+  font-size: 1.2rem;
+}
+
+.fa-cat {
+  font-size: 35px;
+}
+
+#profile-content > div {
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#profile-content > p {
+  text-align: justify;
+  font-size: 1.2rem
+}
+
+.fab {
+  font-size: 1rem;
+ }
+ 
