@@ -1,22 +1,23 @@
 .container-main {
   display: flex;
-  border: solid black;
+  border: black;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   max-width: 1000px;
   margin: auto;
+  background-color: #758ecd;
 }
 #name {
-  margin: 0px auto;
-  border: green solid;
+  margin: 10px auto;
+  border: green;
 }
 
 .container-content {
   display: flex;
   max-width: 1000px;
   width: 100%;
-  border: solid blue;
+  border: blue;
   flex-wrap: wrap-reverse;
 }
 
@@ -24,14 +25,16 @@
   max-width: 400px;
   width: 100%;
   float: left;
-  border: solid greenyellow;
-  margin: 20px auto;
+  border: greenyellow;
+  margin: 0px auto;
+  padding-left: 15px;
 }
 
 .left-side-title {
   display: flex;
-  border: solid blueviolet;
+  border: blueviolet;
   padding-left: 25px;
+  background-color: #624cab;
 }
 
 .left-side-title > div {
@@ -40,6 +43,7 @@
 
 .left-side-content {
   padding: 10px 45px;
+  background-color: #97adfd;
 }
 
 .education-content {
@@ -62,14 +66,15 @@
   max-width: 550px;
   width: 100%;
   float: right;
-  border: solid red;
-  margin: 20px auto;
+  border: red;
+  margin: 15px 5px;
 }
 
 img {
   display: block;
   width: 75%;
   margin: auto;
+  border: #624cab solid;
 }
 
 #profile-content > div,
@@ -79,13 +84,13 @@ img {
 
 #social-bar {
   display: flex;
-  border: darkturquoise solid;
+  border: darkturquoise;
   align-self: center;
   align-items: flex-end;
-  height: 100%
+  height: 100%;
+  padding-top: 5px;
 }
 
 .fab {
   margin: auto 25px;
-
- }
+}
