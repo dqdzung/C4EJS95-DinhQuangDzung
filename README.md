@@ -5,3 +5,4 @@
 ### Day 3 (Sep 1st) - Array
 ### Day 4 (Sep 8th) - Array Revision | Object 
 ### Day 5 (Sep 12th) - Lab | Function 
+### Day 6 (Sep 15th) - HTML | CSS
