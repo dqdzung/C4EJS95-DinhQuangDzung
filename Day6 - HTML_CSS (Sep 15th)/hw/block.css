@@ -1,6 +1,5 @@
 .container-main {
   display: flex;
-  border: black;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -10,14 +9,12 @@
 }
 #name {
   margin: 10px auto;
-  border: green;
 }
 
 .container-content {
   display: flex;
-  max-width: 1000px;
   width: 100%;
-  border: blue;
+  padding: 0px 25px;
   flex-wrap: wrap-reverse;
 }
 
@@ -25,14 +22,12 @@
   max-width: 400px;
   width: 100%;
   float: left;
-  border: greenyellow;
   margin: 0px auto;
-  padding-left: 15px;
+  padding: 0px 25px;
 }
 
 .left-side-title {
   display: flex;
-  border: blueviolet;
   padding-left: 25px;
   background-color: #624cab;
 }
@@ -63,11 +58,10 @@
 #container-right-side {
   display: flex;
   flex-direction: column;
-  max-width: 550px;
+  max-width: 500px;
   width: 100%;
   float: right;
-  border: red;
-  margin: 15px 5px;
+  margin: 15px auto;
 }
 
 img {
