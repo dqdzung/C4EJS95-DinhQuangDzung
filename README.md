@@ -6,3 +6,5 @@
 ### Day 4 (Sep 8th) - Array Revision | Object 
 ### Day 5 (Sep 12th) - Lab | Function 
 ### Day 6 (Sep 15th) - HTML | CSS
+
+### Project Mem: Nguyễn Duy Hưng, Nguyễn Văn Quyền, Đinh Quang Dũng
