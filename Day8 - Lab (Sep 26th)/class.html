@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      id="username"
+      type="text"
+      placeholder="Username"
+      onkeypress="pressEnter(event)"
+    />
+    <input
+      id="password"
+      type="password"
+      placeholder="Password"
+      onkeypress="pressEnter(event)"
+    />
+    <button onclick="logInValidate()">Login</button>
+    <table border="solid">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Brand</th>
+        </tr>
+      </thead>
+      <tbody id="phones-list">
+        <tr>
+          <td>1</td>
+          <td><img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-x.jpg" alt="" width="100px"></td>
+          <td><span onclick='click("iPhone X")'>iPhone X</span></td>
+          <td>20.000.000</td>
+          <td>Apple</td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="class.js"></script>
+  </body>
+</html>
