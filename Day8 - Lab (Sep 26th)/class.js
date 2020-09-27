@@ -35,7 +35,7 @@ function displayPhone() {
       <tr>
           <td>${i + 1}</td>
           <td><img src="${phone.img}" alt="${phone.name}" width="100px"></td>
-          <td><span onclick="click(${phone.name})">${phone.name}<span></td>
+          <td><span onclick="myClick('${phone.name}')">${phone.name}<span></td>
           <td>${phone.price}</td>
           <td>${phone.brand}</td>
         </tr>
@@ -44,6 +44,6 @@ function displayPhone() {
   }
 }
 displayPhone();
-function click(phone) {
+function myClick(phone) {
 alert(phone);
 }
