@@ -1,3 +1,10 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #counter-container {
   display: flex;
   flex-direction: row;
@@ -32,10 +39,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: auto;
 }
 
-#start, #stop {
+#start,
+#stop {
   align-items: center;
   justify-content: center;
   width: 50px;
@@ -51,4 +59,24 @@
 #timer-input {
   height: 25px;
   text-align: center;
+}
+
+#quote-containter {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#quote-text,
+#quote-author {
+  margin-top: 10px;
+}
+
+#quote-text {
+  font-size: 30px;
+}
+
+#quote-author {
+  font-size: 20px;
 }

@@ -5,19 +5,59 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="counter-container">
-      <button id="up" class="button" onclick="countUp()">+</button>
-      <div id="counter">0</div>
-      <button id="down" class="button" onclick="countDown()">-</button>
-      <button id="clickMe" class="button" onclick="myTime()">Click me!</button>
+    <div id="container">
+      <div id="counter-container">
+        <button id="up" class="button" onclick="countUp()">+</button>
+        <div id="counter">0</div>
+        <button id="down" class="button" onclick="countDown()">-</button>
+        <button id="clickMe" class="button" onclick="myTime()">
+          Click me!
+        </button>
+      </div>
+      <div id="now"></div>
+      <hr style="width: 100%" />
+      <div id="timer-container">
+        <input
+          id="timer-input"
+          type="text"
+          placeholder="Enter time to countdown"
+        />
+        <button id="start" class="button">Start</button>
+        <button id="stop" class="button">Stop</button>
+      </div>
+      <div id="timer">Countdown goes here</div>
+      <hr style="width: 100%" />
+      <div id="quote-containter">
+        <div><button id="quote-btn">Get quote!</button></div>
+        <div id="quote-text">Quote goes here</div>
+        <div id="quote-author">Author</div>
+      </div>
+      <hr style="width: 100%" />
     </div>
-    <div id="now"></div>
-    <div id="timer-container">
-      <input id="timer-input" type="text" placeholder="Enter time to countdown" />
-      <button id="start" class="button">Start</button>
-      <button id="stop" class="button">Stop</button>
-    </div>
-    <div id="timer">Countdown goes here</div>
+    <input type="text" name="project" id="project-input" placeholder="Enter project">
+    <input type="text" name="task" id="task-input" placeholder="Enter task">
+    <input type="text" name="time" id="time-input" placeholder="Time spent">
+    <button id="project-add-btn">Add</button>
+    <button onclick="clearInput()">Clear</button>
+    <table style="margin-top: 10px;" border="solid">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Task</th>
+          <th>Time Spent</th>
+          <th colspan="2">Action</th>
+          </tr>
+      </thead>
+      <tbody id="timesheet-body">
+        <tr>
+          <td>Test 1</td>
+          <td>Task 1</td>
+          <td>0</td>
+          <td style="text-align: center;"><button onclick="removeLine(event)">X</button></td>
+          <td style="text-align: center;"><button onclick="update(event)">U</button></td>
+        </tr>
+      </tbody>
+    </table>
     <script src="lab.js"></script>
     <link rel="stylesheet" href="lab.css" />
   </body>
