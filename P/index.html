@@ -12,11 +12,24 @@
       <button id="login-btn">Login</button>
     </div>
     <div id="register-div">
-        <input id="reg-id" type="text" placeholder="New ID" />
-        <input id="reg-pw" type="password" placeholder="New Password" />
-        <button id="reg-btn">Register</button>
+      <input id="reg-id" type="text" placeholder="New ID" />
+      <input id="reg-pw" type="password" placeholder="New Password" />
+      <button id="reg-btn">Register</button>
+    </div>
+    <div>
+      Cart
+      <ul id="cart"></ul>
+    </div>
+    <div id="product-container">
+      <ul>
+        <li>
+          <div>Product name</div>
+          <div>Price</div>
+          <button onclick="addCart(event)">Add to cart</button>
+        </li>
+      </ul>
     </div>
     <script src="./JS/login_reg.js"></script>
-    <script src="./JS/data_api.js"></script>
+    <script src="./JS/cart.js"></script>
   </body>
 </html>
