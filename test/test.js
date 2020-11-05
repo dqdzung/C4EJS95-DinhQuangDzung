@@ -15,28 +15,20 @@ console.log(findOppositeNumber(10, 6));
 //2.
 const merge2String = (str1, str2) => {
   let result = "";
-  if (str1.length - str2.length > 0) {
-    for (let i = 0; i < str1.length; i++) {
-      if (!str2[i]) {
-        result += str1[i];
-      } else {
-        result += str1[i] + str2[i];
-      }
+  for (let i = 0; i < str1.length || i < str2.length; i++) {
+    if (str1[i]) {
+      result += str1[i];
     }
-  } else {
-    for (let i = 0; i < str2.length; i++) {
-      if (!str1[i]) {
-        result += str2[i];
-      } else {
-        result += str1[i] + str2[i];
-      }
+    if (str2[i]) {
+      result += str2[i];
     }
   }
   return result;
 };
 console.log(merge2String("abc", "123"));
 console.log(merge2String("abc", "0123"));
-console.log(merge2String("abcd", "123"));
+console.log(merge2String("abcde", "123"));
+console.log(merge2String("abcd", "123456789"));
 
 //3.
 const inputDiv = document.getElementById("number-input");
